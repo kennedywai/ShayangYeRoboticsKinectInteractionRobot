@@ -1,0 +1,51 @@
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.exe
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.pdb
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.dll
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.xml
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csprojResolveAssemblyReference.cache
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\MainWindow.baml
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\MainWindow.g.cs
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\App.g.cs
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF_MarkupCompile.cache
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.g.resources
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\Microsoft.Samples.Kinect.SkeletonBasics.Properties.Resources.resources
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.exe
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.exe.config
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\Window1.baml
+D:\ShayangYe Robotics Projects\SkeletonBasics-WPF\obj\Debug\Window1.g.cs
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\bin\Debug\SkeletonBasics-WPF.exe.config
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.exe
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.pdb
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\bin\Debug\SkeletonBasics-WPF.exe
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\bin\Debug\SkeletonBasics-WPF.pdb
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\bin\Debug\Microsoft.Kinect.dll
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\bin\Debug\Microsoft.Kinect.xml
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.csprojResolveAssemblyReference.cache
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\MainWindow.baml
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\Window1.baml
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\MainWindow.g.cs
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\Window1.g.cs
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\App.g.cs
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF_MarkupCompile.cache
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.g.resources
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\Microsoft.Samples.Kinect.SkeletonBasics.Properties.Resources.resources
+D:\ShayangYe Robotics Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\bin\Debug\SkeletonBasics-WPF.exe.config
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\bin\Debug\SkeletonBasics-WPF.exe
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\bin\Debug\SkeletonBasics-WPF.pdb
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\bin\Debug\Microsoft.Kinect.dll
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\bin\Debug\Microsoft.Kinect.xml
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\MainWindow.baml
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\Window1.baml
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\MainWindow.g.cs
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\Window1.g.cs
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\App.g.cs
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF_MarkupCompile.cache
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.g.resources
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\Microsoft.Samples.Kinect.SkeletonBasics.Properties.Resources.resources
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.exe
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.pdb
+D:\ShayangYe Robotics Projects\Visual Studio Projects\ShayangYe_SkeletonBasics\obj\Debug\SkeletonBasics-WPF.csprojResolveAssemblyReference.cache

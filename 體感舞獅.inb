@@ -1,0 +1,579 @@
+Peripheral Ser As ServoRunnerA @ 0
+Peripheral myT As RF24G @ 8     '	Set the module ID as 8
+Dim I As Byte
+Dim Command As Dword
+Dim CID As Byte
+Dim Baudmode As Word
+Dim Baudmode2 As Word
+Dim POX,POY1,POY2 As WORD
+Dim Data(2) As Byte
+Dim DataX,DataY,DataZ As Word
+Dim x As Byte
+Dim g_TxReady As Byte 			' 	Declare the variable for the transmission status
+#DEFINE RxPin 15				
+#DEFINE txPin 14
+#DEFINE Inverted 16384
+#DEFINE Baudrate 9600 			'	Declare baudrate 
+
+
+'-------------------------------Kinect----------------------------------
+Sub Main()
+	'Data = 0
+	'Dim bTxData, bRxData As Byte ' Declare the variable for the received data and the transmission status
+	Baudmode=(4096-(2000000\BaudRate))' 設定傳輸模式為38400bps
+ 	'Baudmode2=(4096-(2000000\BaudRate))+Inverted
+	RunFrameWithTime(0,1000)
+	'RunFrameWithTime(0,1000)
+	ConfigInitVal()
+Do	
+	Serin RxPin,Baudmode,[Data]	
+	Debug CSRXY(5,13), "Data(0)= ",Data(0),CLREOL
+	Debug CSRXY(5,13), "Data(1)= ",Data(1),CLREOL
+	DataX=Data(0)
+	DataY=Data(1)
+	
+	If DataX > 0 AND DataX < 9 Then
+		If DataY >8 And DataY <17 Then
+		DataZ = DataX+(DataY*10)
+		myT.SendVar(DataZ)
+		TEST()
+		End If
+	End If
+	If DataX=48 Then
+		myT.SendVar(DataX)
+		RunFrameWithTime(0,1000)
+	End If
+Loop
+
+End Sub
+
+Sub ConfigInitVal()
+	'myT.EnTxReadyEvent() ' Enable the transmission complete notification Event
+	'myT.SetMode(0) ' Set the mode as receiving mode
+	'myT.SetCh(0) ' Set the transmission channel as 0
+	myT.SetMode(0) ' Set the mode As transmitting mode
+	myT.SetCh(30) '  Set the transmission channel as 0
+	myT.Config()
+End Sub
+
+SUB TEST()
+POX=(DataX-1)*150
+POY1=(DataY-9)*106
+POY2=(DataY-9)*89
+Ser.SetPosSpdAndRun(0,2100-poX,1100)
+Ser.SetPosSpdAndRun(3,2000-poY1,1100)
+Ser.SetPosSpdAndRun(1,900+poY2,1100)
+END SUB
+Sub c()	''6.8 共
+	rgb()	
+	RunFrame24(216,1000)
+	RunFrame24(17,200)
+	RunFrame24(16,100)
+	RunFrame24(17,100)
+	RunFrame24(16,100)
+	RunFrame24(17,100)
+	non()
+End Sub
+
+Sub a()
+
+	
+	r()
+	RunFrameWithTime(2,500)
+	non()
+	g()
+	RunFrameWithTime(1,500)
+	non()
+	b()
+	RunFrameWithTime(3,600)
+	non()
+	rgb()
+	RunFrameWithTime(4,400)
+	non()
+	
+	r()
+	RunFrameWithTime(1,500)
+	non()
+	g()
+	RunFrameWithTime(2,500)
+	non()
+	b()
+	RunFrameWithTime(5,600)
+	non()
+	rgb()
+	RunFrameWithTime(6,400)
+	non()
+	rb()
+	RunFrameWithTime(7,550)
+	RunFrameWithTime(8,550)
+	RunFrameWithTime(9,550)
+	RunFrameWithTime(10,550)
+	non()
+	r()
+	RunFrameWithTime(11,220)
+	RunFrameWithTime(12,300)
+	RunFrameWithTime(13,220)
+	RunFrameWithTime(14,300)
+	non()
+	g()
+	RunFrameWithTime(15,1100)
+	non()
+	b()
+	RunFrameWithTime(2,500)
+	RunFrameWithTime(1,500)
+	RunFrameWithTime(3,600)
+	RunFrameWithTime(4,400)
+	non()
+	rb()
+	RunFrameWithTime(1,500)
+	RunFrameWithTime(2,500)
+	RunFrameWithTime(5,600)
+	RunFrameWithTime(6,400)
+	 non()
+	 rgb()
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	RunFrameWithTime(0,500)
+	non()
+	
+For i=0 To 3
+	rg()
+	RunFrameWithTime(18,120)
+	RunFrameWithTime(19,120)
+	non()
+Next
+
+For i=0 To 3
+	g()	
+	RunFrameWithTime(18,120)
+	RunFrameWithTime(19,120)
+	non()
+Next
+	rg()
+	RunFrameWithTime(20,1100)
+	RunFrameWithTime(21,230)
+	RunFrameWithTime(22,730)
+	non()
+	r()
+	RunFrameWithTime(23,500)
+	RunFrameWithTime(24,500)
+	RunFrameWithTime(25,1000)
+	non()
+	g()
+	RunFrameWithTime(9,500)
+	RunFrameWithTime(10,500)
+	non()
+For i=0 To 2
+	rgb()	
+	RunFrameWithTime(11,200)
+	RunFrameWithTime(12,290)
+	RunFrameWithTime(13,200)
+	RunFrameWithTime(14,290)
+	non()
+Next	
+	'RunFrameWithTime(11,220)
+	'RunFrameWithTime(12,300)
+	b()
+	RunFrameWithTime(0,500)
+'=============================================	
+	RunFrameWithTime(26,1000)
+	RunFrameWithTime(27,230)
+	non()
+	g()
+	RunFrameWithTime(28,730)
+	RunFrameWithTime(29,500)
+	RunFrameWithTime(30,500)
+	RunFrameWithTime(25,1000)
+	non()
+	rb()
+	RunFrameWithTime(10,500)
+	RunFrameWithTime(9,500)
+	non()
+For i=0 To 1	
+	rgb()
+	RunFrameWithTime(13,190)
+	RunFrameWithTime(14,290)
+	RunFrameWithTime(11,190)
+	RunFrameWithTime(12,290)
+	non()
+Next	
+	rg()
+	RunFrameWithTime(13,200)
+	RunFrameWithTime(14,300)
+	RunFrameWithTime(0,550)	
+	non()
+	
+For i=0 To 1
+	r()	
+	RunFrameWithTime(31,1520)
+	RunFrameWithTime(32,520)
+	non()
+	g()
+	RunFrameWithTime(33,1520)
+	RunFrameWithTime(34,520)
+	non()
+Next	
+	rb()
+	RunFrameWithTime(0,520)
+	RunFrameWithTime(35,500)
+	RunFrameWithTime(0,520)
+	RunFrameWithTime(36,500)
+	non()
+	g()
+	RunFrameWithTime(37,250)
+	RunFrameWithTime(38,500)
+	RunFrameWithTime(37,250)
+	non()
+	b()
+	RunFrameWithTime(38,750)
+	RunFrameWithTime(37,250)
+	non()
+	rgb()
+	RunFrameWithTime(39,510)
+	RunFrameWithTime(0,510)
+	RunFrameWithTime(40,510)
+	RunFrameWithTime(0,510)
+	non()
+For i=0 To 3
+	rg()	
+	RunFrameWithTime(18,120)
+	RunFrameWithTime(19,120)
+	non()
+Next
+For i=0 To 3
+	rgb()	
+	RunFrameWithTime(18,120)
+	RunFrameWithTime(19,120)
+	non()
+Next
+	'RunFrameWithTime(0,500)
+	rgb()
+	RunFrameWithTime(2,500)
+	RunFrameWithTime(1,500)
+	RunFrameWithTime(3,600)
+	RunFrameWithTime(4,400)
+	non()
+	rgb()
+	RunFrameWithTime(1,500)
+	RunFrameWithTime(2,500)
+	RunFrameWithTime(5,600)
+	RunFrameWithTime(6,400)
+	non()
+	rb()
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	non()
+	rg()
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	RunFrameWithTime(0,500)
+	non()
+For i=0 To 3	
+	rgb()
+	RunFrameWithTime(18,120)
+	RunFrameWithTime(19,120)
+	non()
+Next
+For i=0 To 2
+	r()	
+	RunFrameWithTime(18,120)
+	RunFrameWithTime(19,120)
+	non()
+Next
+	rgb()
+	RunFrameWithTime(41,250)
+	
+'For i=0 To 3	
+'	RunFrameWithTime(42,120)
+'	RunFrameWithTime(43,120)
+'Next
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	RunFrameWithTime(16,250)
+	RunFrameWithTime(17,250)
+	non()
+	'RunFrameWithTime(0,500)	
+For i=0 To 3	
+	rg()
+	RunFrameWithTime(44,120)
+	RunFrameWithTime(45,120)
+	non()
+Next
+	rgb()		
+	RunFrameWithTime(46,2000)
+	RunFrameWithTime(25,1000)
+	non()
+
+	
+End Sub
+
+
+Sub z()
+
+	rgb()
+	RunFrameWithTime(101,200)
+	
+	RunFrameWithTime(102,2300)
+	non()
+	rg()
+	RunFrameWithTime(103,100)
+	
+	RunFrameWithTime(104,100)
+	RunFrameWithTime(105,2500)
+	non()
+	rb()
+	RunFrameWithTime(106,100)
+	RunFrameWithTime(107,2300)
+	non()
+	rgb()
+	RunFrameWithTime(108,100)
+	RunFrameWithTime(109,100)
+	RunFrameWithTime(110,1800)
+	non()
+For	i=0	To	1	
+	rb()
+	RunFrameWithTime(111,750)
+	RunFrameWithTime(112,100)
+	RunFrameWithTime(113,500)
+	RunFrameWithTime(114,350)
+	RunFrameWithTime(115,400)
+	RunFrameWithTime(116,450)
+	non()
+	r()
+	RunFrameWithTime(117,700)
+	RunFrameWithTime(118,100)
+	RunFrameWithTime(119,100)
+	non()
+	g()
+	RunFrameWithTime(120,750)
+	
+	'RunFrameWithTime(121,100)
+	RunFrameWithTime(122,100)
+	RunFrameWithTime(123,750)
+	RunFrameWithTime(124,100)
+	non()
+	rb()
+	RunFrameWithTime(125,650)
+	RunFrameWithTime(126,100)
+	non()
+	rg()
+	RunFrameWithTime(128,650)
+	RunFrameWithTime(129,100)
+	RunFrameWithTime(130,100)
+	non()
+	NEXT
+	rgb()
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(132,300)
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(133,300)
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(134,300)
+	non()
+	r()
+	RunFrameWithTime(131,600)
+	RunFrameWithTime(135,300)
+	RunFrameWithTime(136,700)
+	non()
+	g()
+	RunFrameWithTime(137,100)
+	RunFrameWithTime(138,700)
+	RunFrameWithTime(139,100)
+	RunFrameWithTime(140,700)
+	non()
+	b()
+'''	RunFrameWithTime(141,100)
+	RunFrameWithTime(142,850)
+	RunFrameWithTime(143,100)
+	RunFrameWithTime(144,100)
+	non()
+	rb()
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(132,300)
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(133,300)
+	non()
+	rg()
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(134,300)
+	RunFrameWithTime(131,600)
+	RunFrameWithTime(135,300)
+	non()
+	rgb()
+	RunFrameWithTime(145,1000)
+	non()
+	rgb()
+	RunFrameWithTime(146,1000)
+	non()
+	rgb()
+	RunFrameWithTime(147,1000)
+	non()
+	rgb()
+	RunFrameWithTime(148,1000)
+	non()
+	r()
+	RunFrameWithTime(149,750)
+	RunFrameWithTime(150,750)
+	non()
+	g()
+	RunFrameWithTime(151,750)
+	RunFrameWithTime(152,750)
+	non()
+	b()
+	RunFrameWithTime(153,750)
+	RunFrameWithTime(154,750)
+	non()
+	rgb()
+	RunFrameWithTime(155,750)
+	RunFrameWithTime(156,750)
+	non()
+	
+	
+
+For	i=0	To 1
+	rg()
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(132,300)
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(133,300)
+	non()
+Next
+	rb()
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(132,300)
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(135,300)
+	non()
+	gb()
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(133,300)
+	RunFrameWithTime(131,600)
+	RunFrameWithTime(134,300)
+	non()
+	b()
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(115,400)
+	RunFrameWithTime(131,550)
+	RunFrameWithTime(116,450)
+	non()
+	g()
+	RunFrameWithTime(111,750)
+	RunFrameWithTime(112,100)
+	RunFrameWithTime(113,500)
+	RunFrameWithTime(114,350)
+	non()
+	RunFrameWithTime(115,400)
+	RunFrameWithTime(116,450)
+	RunFrameWithTime(131,550)
+	b()
+	RunFrameWithTime(117,700)
+	RunFrameWithTime(118,100)
+	RunFrameWithTime(119,100)
+	RunFrameWithTime(120,750)
+	non()
+	g()
+	RunFrameWithTime(122,100)
+	RunFrameWithTime(123,750)
+	RunFrameWithTime(124,100)
+	RunFrameWithTime(125,650)
+	non()
+	r()
+	RunFrameWithTime(126,100)
+	RunFrameWithTime(128,650)
+	RunFrameWithTime(129,100)
+	RunFrameWithTime(130,100)
+	non()
+	rgb()
+	RunFrameWithTime(136,700)
+	RunFrameWithTime(137,100)
+	RunFrameWithTime(138,700)
+	RunFrameWithTime(139,100)
+	non()
+	rb()
+	RunFrameWithTime(140,700)
+'''	RunFrameWithTime(141,100)
+	RunFrameWithTime(142,850)
+	RunFrameWithTime(143,100)
+	RunFrameWithTime(144,100)
+	non()
+	rgb()
+	RunFrameWithTime(146,750)
+	RunFrameWithTime(131,550)
+	non()
+	rg()
+	RunFrameWithTime(157,1000)
+	RunFrameWithTime(0,1000)
+	non()
+	
+	
+End Sub
+
+
+'======執行 "ID" 指定動作，同時設定等待時間====
+
+'============================
+
+
+Sub r()
+		High(8)
+		High(0)
+End Sub
+Sub g()
+		High(9)
+		High(1)
+End Sub
+Sub b()
+		High(10)
+		High(2)
+End Sub
+Sub rg()
+		High(8)High(9)
+		High(0)High(1)
+End Sub
+Sub gb()
+		High(9)High(10)
+		High(1)High(2)
+End Sub
+Sub rb()
+		High(8)High(10)
+		High(0)High(2)
+End Sub
+Sub rgb()
+		High(8)High(9)High(10)
+		High(0)High(1)High(2)
+End Sub
+Sub non()
+		Low(8)Low(9)Low(10)
+		Low(0)Low(1)Low(2)
+End Sub
+Sub RunFrameWithTime(bID As Byte,wTime As Word)
+	Ser.LoadFrame(bID)	'載入Ser "ID" 指定動作
+	Ser.runallservo() 	'執行Ser動作
+	Pause wTime
+End Sub
+
+Sub RunFrame1(bID As Byte,wTime As Word)
+	Ser.LoadFrame(bID)	'載入Ser "ID" 指定動作
+	Ser.run1servo(0) 	'執行Ser動作
+	Pause wTime
+End Sub
+
+Sub RunFrame4(bID As Byte,wTime As Word)
+	Ser.LoadFrame(bID)	'載入Ser "ID" 指定動作
+	Ser.run4servo(1,2,3,4) 	'執行Ser動作
+	Pause wTime
+End Sub
+
+Sub RunFrame24(bID As Byte,wTime As Word)
+	Ser.LoadFrame(bID)	'載入Ser "ID" 指定動作
+	Ser.run2servo(2,4) 	'執行Ser動作
+	Pause wTime
+End Sub
